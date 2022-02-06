@@ -39,6 +39,7 @@ namespace Урок3
             }
             Console.ReadLine();
 
+
         }
     }
 }
