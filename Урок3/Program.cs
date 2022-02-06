@@ -10,15 +10,16 @@ namespace Урок3
     {
         static void Main(string[] args)
         {
-            
-            int[,] Massive =
+
+            string[,] Massive =
             {
-    { 1,2,3,4},
-    { 5,6,7,8},
-    { 9,10,11,12},
-    { 13,14,15,16}   
+    {"Имя1", "Номер1"},
+    {"Имя2", "Номер2"},
+    {"Имя3", "Номер3"},
+    {"Имя4", "Номер4"},
+    {"Имя5", "Номер5"}
 };
-            Console.WriteLine("Выводим наш массив:");
+            Console.WriteLine("Выводим наш телефонный справочник:");
             for (int i = 0; i < Massive.GetLength(0); i++)
             {
                 for (int j = 0; j < Massive.GetLength(1); j++)
@@ -26,16 +27,6 @@ namespace Урок3
                     Console.Write($"{Massive[i, j]} ");
                 }
                 Console.WriteLine();
-            }
-            Console.WriteLine("Выводим элементы двумерного массива по диагонали");
-            int diagonal = 0;
-            for (int i = 0; i < Massive.GetLength(0); i++)
-            {
-                for (int j = 0; j < Massive.GetLength(1); j++)
-                {
-                    diagonal++;
-                    Console.WriteLine($"{new string(' ', diagonal)}{Massive[i, j]}");
-                }
             }
             Console.ReadLine();
 
