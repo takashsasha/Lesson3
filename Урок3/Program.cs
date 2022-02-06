@@ -10,33 +10,31 @@ namespace Урок3
     {
         static void Main(string[] args)
         {
-            
-            int[,] Massive =
+
+            Console.WriteLine("Морской бой");
+            char[,] seaBattle =
             {
-    { 1,2,3,4},
-    { 5,6,7,8},
-    { 9,10,11,12},
-    { 13,14,15,16}   
+    {'X','X','X','O','X','X','O','O','O','X'},
+    {'O','O','O','O','O','O','O','O','O','X'},
+    {'X','X','O','X','O','O','X','X','O','X'},
+    {'O','O','O','X','O','O','O','O','O','X'},
+    {'O','O','O','X','O','O','O','O','O','O'},
+    {'X','O','O','O','O','X','X','X','O','O'},
+    {'X','O','X','O','O','O','O','O','O','O'},
+    {'X','O','O','O','O','O','O','O','O','O'},
+    {'X','O','O','O','X','X','X','O','O','X'},
+    {'X','O','O','O','O','O','O','O','O','X'},
 };
-            Console.WriteLine("Выводим наш массив:");
-            for (int i = 0; i < Massive.GetLength(0); i++)
+            //Вывод массива
+            for (int i = 0; i < seaBattle.GetLength(0); i++)
             {
-                for (int j = 0; j < Massive.GetLength(1); j++)
+                for (int j = 0; j < seaBattle.GetLength(1); j++)
                 {
-                    Console.Write($"{Massive[i, j]} ");
+                    Console.Write($"{seaBattle[i, j]} ");
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("Выводим элементы двумерного массива по диагонали");
-            int diagonal = 0;
-            for (int i = 0; i < Massive.GetLength(0); i++)
-            {
-                for (int j = 0; j < Massive.GetLength(1); j++)
-                {
-                    diagonal++;
-                    Console.WriteLine($"{new string(' ', diagonal)}{Massive[i, j]}");
-                }
-            }
+
             Console.ReadLine();
 
         }
