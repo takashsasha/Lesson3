@@ -10,34 +10,16 @@ namespace Урок3
     {
         static void Main(string[] args)
         {
-            
-            int[,] Massive =
+            Console.WriteLine("Введите строку:");
+            string m = Console.ReadLine();
+            char[] chars = m.ToCharArray();
+            Console.WriteLine("Ваша строка на оборот:");
+            for (int i = chars.Length; i > 0; i--)
             {
-    { 1,2,3,4},
-    { 5,6,7,8},
-    { 9,10,11,12},
-    { 13,14,15,16}   
-};
-            Console.WriteLine("Выводим наш массив:");
-            for (int i = 0; i < Massive.GetLength(0); i++)
-            {
-                for (int j = 0; j < Massive.GetLength(1); j++)
-                {
-                    Console.Write($"{Massive[i, j]} ");
-                }
-                Console.WriteLine();
+                Console.Write(chars[i - 1]);
             }
-            Console.WriteLine("Выводим элементы двумерного массива по диагонали");
-            int diagonal = 0;
-            for (int i = 0; i < Massive.GetLength(0); i++)
-            {
-                for (int j = 0; j < Massive.GetLength(1); j++)
-                {
-                    diagonal++;
-                    Console.WriteLine($"{new string(' ', diagonal)}{Massive[i, j]}");
-                }
-            }
-            Console.ReadLine();
+
+            Console.ReadKey();
 
         }
     }
